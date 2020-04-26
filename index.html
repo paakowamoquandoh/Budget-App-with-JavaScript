@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="budget.css">
-        <title>My Budget</title>
-    </head>
-    <body>
-
-
-
-    	<div class="top">
-    		<div class="budget">
-    			<div class="budgetTitle">
-                    Available Budget in <span class="budgetTitle--month">%Month%</span>:
-                </div>
-                
-                <div class="budgetValue">+ 2,345.64</div>
-                
-                <div class="budgetIncome clearfix">
-                    <div class="budgetIncome--text">Income</div>
-                    <div class="right">
-                        <div class="budgetIncome--value">+ 4,300.00</div>
-                        <div class="budgetIncome--percentage">&nbsp;</div>
-                    </div>
-                </div>
-                
-                <div class="budgetExpenses clearfix">
-                    <div class="budgetExpenses--text">Expenses</div>
-                    <div class="right clearfix">
-                        <div class="budgetExpenses--value">- 1,954.36</div>
-                        <div class="budgetExpenses--percentage">45%</div>
-                    </div>
-                </div>
-    		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+      integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link type="tex/css" rel="stylesheet" href="animate.min.css" />
+    <link type="text/css" rel="stylesheet" href="budget.css" />
+    <title>My Budget</title>
+  </head>
+  <body>
+    <div class="top">
+      <div class="budget">
+        <div class="budgetTitle">
+          Available Budget in <span class="budgetTitle--month"><i></i>></span>:
         </div>
-           
-          
 
-            <div class="bottom">
-            <div class="add">
-                <div class="addContainer">
-                    <select class="addType">
-                        <option value="inc" selected>+</option>
-                        <option value="exp">-</option>
-                    </select>
-                    <input type="text" class="addDescription" placeholder="Add description">
-                    <input type="number" class="addValue" placeholder="Value">
-                    <button type="button" class="addBtn"><i class="ion-ios-checkmark-outline"></i></button>
-                </div>
-            </div>
-            
-            <div class="container clearfix">
-                <div class="income">
-                    <h2 class="incomeTitle">Income</h2>
-                    
-                    <div class="incomeList">
-                       
-                    
-                        <!-- <div class="item clearfix" id="income-0">
+        <div class="budgetValue"></div>
+
+        <div class="budgetIncome clearfix shadow p-3 rounded">
+          <div class="budgetIncome--text">Income</div>
+          <div class="right">
+            <div class="budgetIncome--value">+ 4,300.00</div>
+            <div class="budgetIncome--percentage">&nbsp;</div>
+          </div>
+        </div>
+
+        <div class="budgetExpenses clearfix shadow p-3 rounded">
+          <div class="budgetExpenses--text">Expenses</div>
+          <div class="right clearfix">
+            <div class="budgetExpenses--value">- 1,954.36</div>
+            <div class="budgetExpenses--percentage">45%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="add">
+        <div class="addContainer">
+          <select class="addType">
+            <option value="inc" selected>+</option>
+            <option value="exp">-</option>
+          </select>
+          <input
+            type="text"
+            class="addDescription"
+            placeholder="Add description"
+          />
+          <input type="number" class="addValue" placeholder="Value" />
+          <button type="button" class="addBtn">
+            <i class="ion-ios-checkmark-outline"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="container clearfix">
+        <div class="income shadow p-3 bg-white rounded">
+          <h2 class="incomeTitle"><i>Income</i><hr></h2>
+
+          <div class="incomeList">
+            <!-- <div class="item clearfix" id="income-0">
                             <div class="itemDescription">Salary</div>
                             <div class="right clearfix">
                                 <div class="itemValue">+ 2,100.00</div>
@@ -78,24 +92,18 @@
                                 </div>
                             </div>
                         </div> -->
-                    
-                        
-                    </div>
-                </div>
-                
-                
-                
-                <div class="expenses">
-                    <h2 class="expensesTitle">Expenses</h2>
-                    
-                    <div class="expensesList">
-                       
-                    
-                        <!-- <div class="item clearfix" id="expense-0">
+          </div>
+        </div>
+
+        <div class="expenses shadow p-3 bg-white rounded">
+          <h2 class="expensesTitle"><i>Expenses</i><hr></h2>
+
+          <div class="expensesList">
+            <!-- <div class="item clearfix" id="expense-0">
                             <div class="itemDescription">Apartment rent</div>
                             <div class="right clearfix">
                                 <div class="itemValue">- 900.00</div>
-                                <div class="itemPercentage">21%</div>
+                                <div class="itemPercentage"></div>
                                 <div class="itemDelete">
                                     <button class="itemDelete--btn"><i class="ion-ios-close-outline"></i></button>
                                 </div>
@@ -105,25 +113,33 @@
                             <div class="itemDescription">Grocery shopping</div>
                             <div class="right clearfix">
                                 <div class="itemValue">- 435.28</div>
-                                <div class="itemPercentage">10%</div>
+                                <div class="itemPercentage"></div>
                                 <div class="itemDelete">
                                     <button class="itemDelete--btn"><i class="ion-ios-close-outline"></i></button>
                                 </div>
                             </div>
                         </div>
                          -->
-                        
-                    </div>
-                </div>
-            </div>
-            
-            
-        </div>	
-    
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-
-    	<script src="app.js"></script>
-    </body>
-    </html>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+      integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

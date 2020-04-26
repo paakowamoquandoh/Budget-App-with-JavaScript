@@ -35,15 +35,16 @@ body{
 .budgetTitle{
     font-size: x-large;
     text-align: center;
-    margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(219, 219, 248);
 }
 
 .budgetValue{
     font-weight: 300;
     font-size: 46px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     letter-spacing: 2px;
 
 }
@@ -104,8 +105,10 @@ body{
     border-radius: 3px;
 }
 
-
-/*bottom*/
+/* 
+.bottom{
+    background: grey;
+} */
 
 .add {
     padding: 14px;
@@ -174,15 +177,24 @@ body{
     margin: 60px auto;
 }
 
+
 .income {
     float: left;
     width: 475px;
-    margin-right: 50px;
+    margin-right: 10px;
+    color: rgb(24, 128, 10);
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 1px rgb(96, 126, 172) solid;
 }
 
 .expenses {
     float: left;
     width: 475px;
+    color: rgb(189, 15, 15);
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 1px rgb(96, 126, 172) solid;
 }
 
 h2 {
@@ -213,11 +225,10 @@ h2 {
 }
 
 .itemPercentage {
-    float: left;
+    float: right;
     margin-left: 20px;
     transition: transform 0.3s;
     font-size: 11px;
-    background-color: #FFDAD9;
     padding: 3px;
     border-radius: 3px;
     width: 32px;
